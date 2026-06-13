@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   return (
-    <h1 className="text-6xl font-bold underline bg-purple-900 text-white">hello react</h1>
+    <h1 className="text-6xl font-bold underline bg-purple-900 text-white"> react</h1>
   )
 }
 
