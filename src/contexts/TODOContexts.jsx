@@ -1,25 +1,19 @@
-import { createContext, useState } from "react";
-
-
+import { createContext, useState, useContext } from "react"; // Added useContext here
 
 export const TODOContext = createContext({
-    todos: [
-        { id : 1, title: "Learn React", completed: false },
-        { id : 2, title: "Learn Context API", completed: false },
-        { id : 3, title: "Learn Redux", completed: false },
-        { id : 4, title: "Learn React Router", completed: false },
-        { id : 5, title: "Learn React Hooks", completed: false },
-    ],
-        addTodo: (title) => {},
-        updateTodo: (id,title) => {},
-        deleteTodo: (id,) => {},
-        toggleTodocompleted: (id) => {},
+    todos: [],
+    addTodo: (title) => {},
+    updateTodo: (id, title) => {},
+    deleteTodo: (id) => {},
+    toggleTodocompleted: (id) => {},
 });
- export const useTODOContext = () => 
-    {return useContext(TODOContext)
 
-    }
-       export const TODOProvider = ({ children }) => {
+// Changed name to useTODO to match your index.js export statement exactly!
+export const useTODO = () => {
+    return useContext(TODOContext);
+};
+
+export const TODOProvider = ({ children }) => {
     const [todos, setTodos] = useState([
         { id : 1, title: "Learn React", completed: false },
         { id : 2, title: "Learn Context API", completed: false },
